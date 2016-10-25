@@ -2,6 +2,9 @@
 1475763757 source:c:\users\user\desktop\intro to program\final project\main.cpp
 	<iostream>
 
-1475934007 source:c:\git hub\project1\final project\main.cpp
+1477366217 source:c:\git hub\project1\final project\main.cpp
 	<iostream>
+	<cmath>
+	<cstdlib>
+	<string>
 
