@@ -1,7 +1,9 @@
 #ifndef DEPRECIATION_MENU_H_INCLUDED
 #define DEPRECIATION_MENU_H_INCLUDED
-
 #include "depreciation.h"
+#include <iomanip>
+
+void exitchoice();//defined in main.cpp
 
 //depreciation option
 void depreciationChoices ()
@@ -14,14 +16,14 @@ void depreciationChoices ()
     int depoption;
 
     //ask for the depreciation option
-    cout << "1. Depreciation good value" << endl << "2. Depreciation book value" << endl;
-    //option using char datatype to prevent error while the input is other than number.
+    cout << "1. Depreciation good value" << endl << "2. Depreciation book value" << endl << "3. Back" << endl;
+    //char input: to prevent error if input other than number
     cin >> depreciationOption;
 
     depoption = atoi (depreciationOption);
 
     //When the users input the wrong option it will loop to ask other input
-    while (depoption < 1 || depoption >2)
+    while (depoption < 1 || depoption >3)
     {
         cout<<"Please enter the right number"<<endl;
         cin>>depreciationOption;
@@ -39,8 +41,22 @@ void depreciationChoices ()
 
         Depreciation good(percentage, capitalo, months);
 
-        cout << "Your remaining value " << good.getDepreciationGoodValue() << endl;
+        system("cls");
 
+        try
+        {
+            good.getDepreciationGoodValue();
+            cout << "-USER INPUT DATA-"<< endl;
+            cout << left << setw (10) << "Month" << right << setw(10) << ": " << good.getMonth() << endl;
+            cout << left << setw (10) << "Capital" << right << setw(10) << ": " << good.getCapital() << endl;
+            cout << left << setw (10) << "Percentage" << right << setw(10) << ": " << good.getPercent() << "%" << endl;
+
+        }
+        catch (int i)
+        {
+            cout << "Your thing will not have any value from month " << i << endl;
+        }
+        exitchoice();
     }
     else if (depoption == 2)
     {
@@ -51,9 +67,24 @@ void depreciationChoices ()
 
         Depreciation book(percentage, capitalo, months);
 
-        cout << "Your remaining value " << book.getDepreciationBookValue() << endl;
+        system("cls");
 
+        try
+        {
+            book.getDepreciationBookValue();
+            cout << "-USER INPUT DATA-"<< endl;
+            cout << left << setw (10) << "Month" << right << setw(10) << ": " << book.getMonth() << endl;
+            cout << left << setw (10) << "Capital" << right << setw(10) << ": " << book.getCapital() << endl;
+            cout << left << setw (10) << "Percentage" << right << setw(10) << ": " << book.getPercent() << "%" << endl;
+        }
+        catch (int i)
+        {
+            cout << "Your thing will not have any value from month " << i << endl;
+        }
+        exitchoice();
     }
+    else
+        return;
 }
 
 

@@ -2,7 +2,7 @@
 1475763757 source:c:\users\user\desktop\intro to program\final project\main.cpp
 	<iostream>
 
-1477886946 source:c:\git hub\project1\final project\main.cpp
+1478252053 source:c:\git hub\project1\final project\main.cpp
 	<iostream>
 	<cmath>
 	<cstdlib>
@@ -12,20 +12,38 @@
 	"depreciation.cpp"
 	"interest menu.h"
 
-1478087953 c:\git hub\project1\final project\interest.cpp
+1478261136 c:\git hub\project1\final project\interest.cpp
 	<iostream>
 	"interest.h"
+	"IntAndDepClass.h"
 
-1478087957 c:\git hub\project1\final project\interest.h
+1478260997 c:\git hub\project1\final project\interest.h
+	"IntAndDepClass.h"
 
-1477886414 c:\git hub\project1\final project\depreciation menu.h
+1478255901 c:\git hub\project1\final project\depreciation menu.h
 	"depreciation.h"
+	<iomanip>
 
-1477882307 c:\git hub\project1\final project\depreciation.h
+1478255534 c:\git hub\project1\final project\depreciation.h
+	"IntAndDepClass.h"
 
-1477842372 c:\git hub\project1\final project\depreciation.cpp
+1478257115 c:\git hub\project1\final project\depreciation.cpp
 	<iostream>
 	"depreciation.h"
+	"IntAndDepClass.h"
 
-1478087949 c:\git hub\project1\final project\interest menu.h
+1478253619 c:\git hub\project1\final project\interest menu.h
+	<iomanip>
+
+1478097892 c:\git hub\project1\final project\main.cpp
+	<iostream>
+	<cmath>
+	<cstdlib>
+	<string>
+	"interest.cpp"
+	"depreciation menu.h"
+	"depreciation.cpp"
+	"interest menu.h"
+
+1478257471 c:\git hub\project1\final project\intanddepclass.h
 

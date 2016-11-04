@@ -1,27 +1,14 @@
 #ifndef DEPRECIATION_H_INCLUDED
 #define DEPRECIATION_H_INCLUDED
+#include "IntAndDepClass.h"
 
-//class to hold the attribute and function of depreciation
-class Depreciation
+//class to hold the member of depreciation
+class Depreciation:public IntAndDep
 {
-private:
-    static double objectValue1;
-    static double objectValue2;
-    double percent,
-           capital,
-           month;
-public:
-    Depreciation(double p, double c, double m)
-    {
-        percent = p;
-        capital = c;
-        month = m;
-    }
-    double getPercent()const;
-    double getCapital()const;
-    double getMonth()const;
-    double getDepreciationGoodValue ()const;
-    double getDepreciationBookValue ()const;
+    public:
+        Depreciation(double p, double c, double m);
+        double getDepreciationGoodValue ()const;
+        double getDepreciationBookValue ()const;
 };
 
 #endif // DEPRECIATION_H_INCLUDED

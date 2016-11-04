@@ -12,8 +12,24 @@ using namespace std;
 void interestChoices ();
 void depreciationChoices ();
 
-double compoundInterest (double, double, double, double);
+//double compoundInterest (double, double, double, double);
 
+void exitchoice()
+{
+    char choice;
+
+    cout << "Do you wish to Exit? (Y/N)" << endl;
+    cin >> choice;
+
+    if (toupper(choice)=='Y')
+    {
+        exit(0);
+    }
+    else
+    {
+        return;
+    }
+}
 
 int main()
 {
@@ -24,6 +40,7 @@ int main()
     //print the menu at least once
     do
     {
+        system("cls");
         //asking the user to choose the option
         cout << "1. Interest" << endl << "2. Depreciation" << endl << "3. exit" << endl;
         cout << "Please choose the option you want " << endl;
@@ -39,13 +56,11 @@ int main()
             ops = atoi(option);
 
         }
-        while (ops == 1){
+        if (ops == 1){
             cout << "Welcome to the interest section" << endl;
-            break;
         }
-        while (ops == 2){
+        if (ops == 2){
                 cout << "Welcome to the depreciation section" << endl;
-                break;
         }
 
         //The condition if the users choose the option
