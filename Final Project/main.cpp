@@ -12,8 +12,6 @@ using namespace std;
 void interestChoices ();
 void depreciationChoices ();
 
-//double compoundInterest (double, double, double, double);
-
 void exitchoice()
 {
     char choice;
@@ -49,13 +47,13 @@ int main()
         ops = atoi(option);
 
         //The condition if the users input the wrong option or the right option
-        while (ops < 1 || ops > 3){
+        while (ops < 1 || ops > 3)
+        {
             cout << "Please input the correct number" << endl;
             cin >> option;
-
             ops = atoi(option);
-
         }
+
         if (ops == 1){
             cout << "Welcome to the interest section" << endl;
         }

@@ -2,7 +2,7 @@
 1475763757 source:c:\users\user\desktop\intro to program\final project\main.cpp
 	<iostream>
 
-1478252053 source:c:\git hub\project1\final project\main.cpp
+1478278144 source:c:\git hub\project1\final project\main.cpp
 	<iostream>
 	<cmath>
 	<cstdlib>
@@ -20,7 +20,7 @@
 1478260997 c:\git hub\project1\final project\interest.h
 	"IntAndDepClass.h"
 
-1478255901 c:\git hub\project1\final project\depreciation menu.h
+1478343255 c:\git hub\project1\final project\depreciation menu.h
 	"depreciation.h"
 	<iomanip>
 
@@ -32,7 +32,7 @@
 	"depreciation.h"
 	"IntAndDepClass.h"
 
-1478253619 c:\git hub\project1\final project\interest menu.h
+1478324230 c:\git hub\project1\final project\interest menu.h
 	<iomanip>
 
 1478097892 c:\git hub\project1\final project\main.cpp
@@ -45,5 +45,5 @@
 	"depreciation.cpp"
 	"interest menu.h"
 
-1478257471 c:\git hub\project1\final project\intanddepclass.h
+1478278364 c:\git hub\project1\final project\intanddepclass.h
 

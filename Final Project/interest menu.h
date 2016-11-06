@@ -11,6 +11,8 @@ void interestChoices()
             capitalo,
             months;
 
+    bool wrongInput = true;
+
     char interestOption[10];
     int intoption;
 
@@ -35,13 +37,25 @@ void interestChoices()
         cout << "-SINGLE INTEREST-" << endl;
         cout << "Percentage....%per month(s),";
         cout << " the capital...., and how long....month(s)" << endl;
-        cin >> percentage >> capitalo >> months;
+
+        while (wrongInput)
+        {
+            cin >> percentage >> capitalo >> months;
+            if (percentage<=0||capitalo<=0||months<=0)
+            {
+                cout << "Do not enter negative value, please try again" << endl;
+                wrongInput = true;
+            }
+            else
+                wrongInput = false;
+        }
+
 
         Interest single(percentage, capitalo, months);
 
         system("cls");
 
-        cout << "Your capital will be " << single.getSingleInterest() << endl;
+        single.getSingleInterest();
         cout << "-USER INPUT DATA-"<< endl;
         cout << left << setw (10) << "Month" << right << setw(10) << ": " << single.getMonth() << endl;
         cout << left << setw (10) << "Capital" << right << setw(10) << ": " << single.getCapital() << endl;
@@ -55,11 +69,23 @@ void interestChoices()
         cout << "-COMPOUND INTEREST-" << endl;
         cout << "Please input the interest percentage....%per month(s),";
         cout << " the capital...., and how long....month(s)" << endl;
-        cin >> percentage >> capitalo >> months;
+
+        while (wrongInput)
+        {
+            cin >> percentage >> capitalo >> months;
+            if (percentage<=0||capitalo<=0||months<=0)
+            {
+                cout << "Do not enter negative value, please try again" << endl;
+                wrongInput = true;
+            }
+            else
+                wrongInput = false;
+        }
 
         system("cls");
 
         Interest compound(percentage, capitalo, months, months);
+
         cout << "-USER INPUT DATA-"<< endl;
         cout << left << setw (10) << "Month" << right << setw(10) << ": " << compound.getMonth() << endl;
         cout << left << setw (10) << "Capital" << right << setw(10) << ": " << compound.getCapital() << endl;
@@ -71,7 +97,5 @@ void interestChoices()
     else
         return;
 }
-
-
 
 #endif // INTEREST_MENU_H_INCLUDED

@@ -12,6 +12,8 @@ void depreciationChoices ()
             capitalo,
             months;
 
+    bool wrongInput = true;
+
     char depreciationOption[10];
     int depoption;
 
@@ -37,7 +39,18 @@ void depreciationChoices ()
         cout << "-DEPRECIATION GOOD VALUE-" << endl;
         cout << "Input the percentage....%per month(s),";
         cout << " the capital...., and how long....month(s)" << endl;
-        cin >> percentage >> capitalo >> months;
+
+        while (wrongInput)
+        {
+            cin >> percentage >> capitalo >> months;
+            if (percentage<=0||capitalo<=0||months<=0)
+            {
+                cout << "Do not enter negative value, please try again" << endl;
+                wrongInput = true;
+            }
+            else
+                wrongInput = false;
+        }
 
         Depreciation good(percentage, capitalo, months);
 
@@ -46,16 +59,18 @@ void depreciationChoices ()
         try
         {
             good.getDepreciationGoodValue();
-            cout << "-USER INPUT DATA-"<< endl;
-            cout << left << setw (10) << "Month" << right << setw(10) << ": " << good.getMonth() << endl;
-            cout << left << setw (10) << "Capital" << right << setw(10) << ": " << good.getCapital() << endl;
-            cout << left << setw (10) << "Percentage" << right << setw(10) << ": " << good.getPercent() << "%" << endl;
 
         }
         catch (int i)
         {
             cout << "Your thing will not have any value from month " << i << endl;
         }
+
+        cout << "-USER INPUT DATA-"<< endl;
+        cout << left << setw (10) << "Month" << right << setw(10) << ": " << good.getMonth() << endl;
+        cout << left << setw (10) << "Capital" << right << setw(10) << ": " << good.getCapital() << endl;
+        cout << left << setw (10) << "Percentage" << right << setw(10) << ": " << good.getPercent() << "%" << endl;
+
         exitchoice();
     }
     else if (depoption == 2)
@@ -63,7 +78,18 @@ void depreciationChoices ()
         cout << "-DEPRECIATION BOOK VALUE-" << endl;
         cout << "Please input the interest percentage....%per month(s),";
         cout << " the capital...., and how long....month(s)" << endl;
-        cin >> percentage >> capitalo >> months;
+
+        while (wrongInput)
+        {
+            cin >> percentage >> capitalo >> months;
+            if (percentage<=0||capitalo<=0||months<=0)
+            {
+                cout << "Do not enter negative value, please try again" << endl;
+                wrongInput = true;
+            }
+            else
+                wrongInput = false;
+        }
 
         Depreciation book(percentage, capitalo, months);
 
@@ -72,21 +98,21 @@ void depreciationChoices ()
         try
         {
             book.getDepreciationBookValue();
-            cout << "-USER INPUT DATA-"<< endl;
-            cout << left << setw (10) << "Month" << right << setw(10) << ": " << book.getMonth() << endl;
-            cout << left << setw (10) << "Capital" << right << setw(10) << ": " << book.getCapital() << endl;
-            cout << left << setw (10) << "Percentage" << right << setw(10) << ": " << book.getPercent() << "%" << endl;
         }
         catch (int i)
         {
             cout << "Your thing will not have any value from month " << i << endl;
         }
+
+        cout << "-USER INPUT DATA-"<< endl;
+        cout << left << setw (10) << "Month" << right << setw(10) << ": " << book.getMonth() << endl;
+        cout << left << setw (10) << "Capital" << right << setw(10) << ": " << book.getCapital() << endl;
+        cout << left << setw (10) << "Percentage" << right << setw(10) << ": " << book.getPercent() << "%" << endl;
+
         exitchoice();
     }
     else
         return;
 }
-
-
 
 #endif // DEPRECIATION_MENU_H_INCLUDED

@@ -32,12 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="ExitChoice.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="IntAndDepClass.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="depreciation menu.h" />
+		<Unit filename="depreciation.cpp" />
+		<Unit filename="depreciation.h" />
+		<Unit filename="interest menu.h" />
+		<Unit filename="interest.cpp" />
+		<Unit filename="interest.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
